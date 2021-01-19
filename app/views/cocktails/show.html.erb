@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1526962093464-db85c516ba74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)";>
+  <div class="container-lg">
+    <h1><%= @cocktail.name %></h1>
+    <div class="display container-lg col-6 mt-5">
+      <h3 class="ingredients"> Ingredients </h3>
+        <% @cocktail.doses.each do |dose| %>
+          <p class="badge bg-light text-dark"><%= dose.description %> of <%= dose.ingredient.name %>
+          <%= link_to dose_path(dose), :method => :delete, data: { confirm: "Are you sure?" }, class: "text-secondary" do %>
+          <i class="far fa-trash-alt"></i> </p>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+
+  <div class="form container-lg col-6 mt-5">
+    <h4>Want to mix something else?</h4>
+      <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+        <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+        <%= f.input :description %>
+        <%= f.submit "Add" %>
+      <% end %>
+  </div>

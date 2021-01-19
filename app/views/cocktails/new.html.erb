@@ -1,0 +1,15 @@
+  <div class="window" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1526962093464-db85c516ba74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)";>
+    <div class="display">
+      <h2>Breathe in.</h2>
+      <p>Where is your mind?</p>
+    </div>
+
+    <div class="form">
+      <div class="container-lg col-6">
+        <%= simple_form_for (@cocktail) do |f| %>
+          <%= f.input :name %>
+          <%= f.submit "Name your Toptail", class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+  </div>

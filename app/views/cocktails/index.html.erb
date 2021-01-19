@@ -1,0 +1,18 @@
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1526962093464-db85c516ba74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)";>
+    <div class="container">
+      <h1>Mix up the colors of the sky into your drops.</h1>
+      <p>Because anything tastes better with a view.</p>
+       <%= link_to 'Start here', new_cocktail_path, class: "btn btn-success" %>
+    </div>
+  </div>
+
+<div class="container-lg">
+  <div class="container mt-5"></div>
+    <h2><strong>Our Mixes</strong></h2>
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card-category"> <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      <% end %>
+    </div>
+</div>
