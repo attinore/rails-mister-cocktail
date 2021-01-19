@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: rails-mister-cocktail_development
+  database: rails_mister_cocktail_development
 
 test:
   <<: *default
-  database: rails-mister-cocktail_test
+  database: rails_mister_cocktail_test
 
 production:
   <<: *default
-  database: toptails_production
-  username: toptails
-  password: <%= ENV[‘TOPTAILS_DATABASE_PASSWORD’] %>
+  database: rails_mister_cocktail_production
+  username: rails_mister_cocktail
+  password: <%= ENV['RAILS_MISTER_COCKTAIL_DATABASE_PASSWORD'] %>
