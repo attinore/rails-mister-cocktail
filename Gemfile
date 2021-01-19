@@ -42,6 +42,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# Added Gemfile
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.12.0'
+gem 'simple_form'
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
