@@ -8,6 +8,7 @@
       <div class="container-lg col-6">
         <%= simple_form_for (@cocktail) do |f| %>
           <%= f.input :name %>
+          <%= f.input :photo, as: :file %>
           <%= f.submit "Name your Toptail", class: "btn btn-danger" %>
         <% end %>
       </div>
