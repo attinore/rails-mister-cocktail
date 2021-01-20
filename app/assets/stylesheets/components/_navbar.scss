@@ -1,10 +1,9 @@
-.navbar {
+.navbar-lewagon {
   justify-content: space-between;
-  font-size: 18px;
-  font-family: Open Sans;
-  color: white;
   background-color: transparent;
   transition: 0.5s background-color ease;
+  color: white;
+  font-weight: bold;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,4 +12,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon-white {
+  background-color: #15526C;
 }
