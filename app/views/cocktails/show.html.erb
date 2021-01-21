@@ -20,5 +20,15 @@
         <%= f.input :description %>
         <%= f.submit "Add", class: "btn btn-success mt-10" %>
       <% end %>
+
+      <ul class="list-group">
+      <% @cocktail.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.comment %></li>
+      <% end %>
+    </ul>
+
+      <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
       </div>
   </div>
+
+
