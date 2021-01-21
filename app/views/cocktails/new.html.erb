@@ -6,15 +6,17 @@
         <p>Where is your mind?</p>
       </div>
 
-      <div class="form mt-5">
-        <div class="container-lg">
+      <div class="form mt-5 container">
+        <div class="cocktail-input-box col-12">
           <%= simple_form_for (@cocktail) do |f| %>
             <%= f.input :name %>
             <%= f.input :photo, as: :file %>
-            <%= f.submit "Name your mix", class: "btn btn-success mt-10" %>
+            <%= f.submit "Name your mix", class: "btn btn-success mt-5" %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+

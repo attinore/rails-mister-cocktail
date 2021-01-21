@@ -53,11 +53,18 @@
   width: 40px;
 }
 
+.card-name {
+  font: raleway;
+  color: #15526c;
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  a {
+  color: white;
+  }
 }
 
 // Smallest device

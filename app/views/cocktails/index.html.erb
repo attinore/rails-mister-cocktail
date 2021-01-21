@@ -13,11 +13,11 @@
 
 </div>
 
- <div class="container mt-5">
+ <div class="card-name container mt-5">
     <h2><strong>Our Mixes</strong></h2>
-     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key %>')">
+     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-        <div class="card-category"> <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key if cocktail.photo.attached? %>')"> <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
       <% end %>
     </div>

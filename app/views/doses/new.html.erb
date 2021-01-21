@@ -2,7 +2,7 @@
 
 <div class="left-window display container-lg col-6">
   <h2>Add your favorites</h2>
-    <div class="container-lg col-6 mt-5">
+    <div class="cocktail-input-box container col-8 mt-5">
     <%= simple_form_for [ @cocktail, @dose ] do |f| %>
       <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
       <%= f.input :description %>
