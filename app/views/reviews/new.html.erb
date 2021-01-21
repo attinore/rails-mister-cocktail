@@ -1,6 +1,12 @@
-<h1>Reviews#new</h1>
-<%= simple_form_for [ @cocktail, @review ] do |f| %>
-  <%= f.input :rating, collection: 0..5, as: :radio_buttons, wrapper: :vertical_collection_inline %>
-  <%= f.input :comment %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+<div class="window" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo.key %>')">
+  <div class="container-lg">
+    <h1><%= @cocktail.name %></h1>
+      <div class="form container-lg col-6 mt-5">
+      <%= simple_form_for [ @cocktail, @review ] do |f| %>
+        <%= f.input :rating, collection: 0..5, as: :radio_buttons, wrapper: :vertical_collection_inline %>
+        <%= f.input :comment %>
+        <%= f.submit "Submit review", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
